@@ -28,29 +28,30 @@ Consigli del giorno
 function reversedParola(parolaArray){
     let parolaInserita = prompt("Inserisci la parola palidroma", "parola");
     parolaArray = Array.from(parolaInserita)
+    const reversedArray = []
+    
     
     for (let i = parolaArray.length - 1; i >= 0; i--) {
-        const reversedArray = parolaArray[i]
-        console.log(reversedArray);
+        const valueAtIndex = parolaArray[i]
+        reversedArray.push(valueAtIndex)
+    }
+
+    let joinWord = reversedArray.join('')
+    console.log(parolaInserita, joinWord);
+
+    if(joinWord !== parolaInserita){
+        console.log("Parola non palidroma");
+    } else{
+        console.log("Parola palidroma");
     }
 }
 
-console.log(reversedParola);
 
 
 
-/*
-function reversedParola(parolaArray){
-    let parolaInserita = prompt("Inserisci la parola palidroma", "parola");
-    parolaArray = Array.from(parolaInserita)
-    
-    for (let i = parolaArray.length - 1; i >= 0; i--) {
-        const reversedArray = parolaArray[i]
-    }
-}
 
-console.log(reversedParola);
-*/
+
+
 
 
 
